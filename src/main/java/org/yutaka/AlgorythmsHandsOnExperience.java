@@ -17,34 +17,35 @@ public class AlgorythmsHandsOnExperience {
      * and Iteration.
      * Fibonacci number is sum of previous two Fibonacci numbers fn= fn-1+ fn-2
      * first 10 Fibonacci numbers are 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
-     *
+     * <p>
      * This Java program for Fibonacci number using recursion.
      * This program uses tail recursion to calculate Fibonacci number for a given number
-     *
+     * <p>
      * input int. output long (for int > 48 unsigned or 92 signed)
+     *
      * @return Fibonacci number
      * test: testFibonacci1
      */
-    long fibonacci1(int number){
-        if(number == 1 || number == 2){
+    long fibonacci1(int n){
+        if(n == 1 || n == 2)
             return 1;
-        }
-        return fibonacci1(number-1) + fibonacci1(number-2); //tail recursion
+        return fibonacci1(n-1) + fibonacci1(n-2); //tail recursion
     }
+
 
     /**
      * Java program to calculate Fibonacci number using loop or Iteration.
      * @return Fibonacci number
      * test: testFibonacci2
      */
-    long fibonacci2(int number){
+    long fibonacci2(int n){
 
-        if(number == 1 || number == 2){
+        if(n == 1 || n == 2){
             return 1;
         }
 
         long fibo1=1, fibo2=1, fibonacci=1;
-        for(int i= 3; i<= number; i++){
+        for(int i= 3; i<= n; i++){
             //Fibonacci number is sum of previous two Fibonacci numbers
             fibonacci = fibo1 + fibo2;
             fibo1 = fibo2;
@@ -65,11 +66,10 @@ public class AlgorythmsHandsOnExperience {
      */
     boolean isPrimeNumber1(int num) {
         int sqrt = (int) sqrt(num) + 1;
-        for (int i = 2; i < sqrt; i++) {
+        for (int i = 2; i < sqrt; i++)
             if (num % i == 0)
                 // number is perfectly divisible - no prime
                 return false;
-        }
         return true;
     }
 

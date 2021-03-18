@@ -65,6 +65,32 @@ public class AlgorythmsHandsOnExperienceTest {
 
     @Test(
             enabled = true,
+            description = "fibonacci1",
+            groups = {"fibonacci"},
+            dependsOnGroups = {},
+            dependsOnMethods = {},
+            priority = 0
+    )
+    public void test01fibonacci1Print() {
+        Assert.assertEquals(ahe.fibonacci1(number01), expected01, "mismatch in fibonacci1 result 01");
+        System.out.println("num: " + number01 + "  |  fib: " + ahe.fibonacci1(number01));
+        Assert.assertEquals(ahe.fibonacci1(number02), expected02, "mismatch in fibonacci1 result 02");
+        System.out.println("num: " + number02 + "  |  fib: " + ahe.fibonacci1(number02));
+        Assert.assertEquals(ahe.fibonacci1(number03), expected03, "mismatch in fibonacci1 result 03");
+        System.out.println("num: " + number03 + "  |  fib: " + ahe.fibonacci1(number03));
+        Assert.assertEquals(ahe.fibonacci1(number04), expected04, "mismatch in fibonacci1 result 04");
+        System.out.println("num: " + number04 + "  |  fib: " + ahe.fibonacci1(number04));
+        Assert.assertEquals(ahe.fibonacci1(number05), expected05, "mismatch in fibonacci1 result 05");
+        System.out.println("num: " + number05 + "  |  fib: " + ahe.fibonacci1(number05));
+        // Assert.assertEquals(ahe.fibonacci1(number06), expected06, "mismatch in fibonacci1 result 06");
+        // Assert.assertEquals(ahe.fibonacci1(number07), expected07, "mismatch in fibonacci1 result 07");
+        for (int i = 1; i <= 20; i++)
+            System.out.print(ahe.fibonacci1(i) + ", ");
+    }
+
+
+    @Test(
+            enabled = true,
             description = "fibonacci2",
             groups = {"fibonacci"},
             dependsOnGroups = {},
@@ -91,10 +117,10 @@ public class AlgorythmsHandsOnExperienceTest {
     )
     public void test01IsPrimeNumber1() {
         Assert.assertTrue(ahe.isPrimeNumber1(2));
-        for(int i : primeArray) {
+        for(int i : primeArray)
             Assert.assertTrue(ahe.isPrimeNumber1(i));
-        }
     }
+
 
     @Test(
             enabled = true,
